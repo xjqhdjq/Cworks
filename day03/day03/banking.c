@@ -25,14 +25,20 @@ int main() {
 	else if (selNo == 2) {
 		printf("출금액> ");
 		scanf_s("%d", &money);
-		
-		
-
-		if (balance - money > 0) {
-			balance -= money;
+		while (sw)
+		{	
+			if (balance - money > 0) {
+				balance -= money;
+				break;
+			}
+			else if (balance - money < 0) {
+				printf("잔고가 부족합니다. \n");
+				printf("출금액> ");
+				scanf_s("%d", &money);
+			}
+			
+			
 		}
-		else if (balance - money < 0) 
-			printf("잔고가 부족합니다. \n");
 		
 	}
 	else if (selNo == 3) {
