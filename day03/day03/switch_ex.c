@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main() {
-
-
-	int ranking = 1;
+	//순위에 따라 메달 색깔을 지정하는 조건문
+	int ranking = 2;
 	char medalColor;
 
 	switch (ranking) {
@@ -19,7 +18,7 @@ int main() {
 	default:
 		medalColor = 'N';
 		break;
-	}
+	}//switch End
 	printf("%d등 메달의 색깔은 %c", ranking, medalColor);
 
 	return 0;

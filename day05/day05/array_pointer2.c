@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-void myprint(int*);
+void myPrint(int*);
 int main() {
+    int num[] = { 1, 2, 3, 4 };
+    myPrint(num);
 
-	int num[] = { 1, 2, 3, 4 };
-	myprint(num);
-
-	return 0;
+    return 0;
 }
 
-void myprint(int* n) {
-	int i;
-	for (i = 0; i < 4; i++) {
-		printf("%2d", *(n + i));
-	}
+void myPrint(int* n) {  //n = num
+    int i;
+    for (i = 0; i < 4; i++) {
+        printf("%2d", *(n + i));
+    }
 }

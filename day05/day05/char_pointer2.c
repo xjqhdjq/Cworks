@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 int main() {
+    char a[10];
+    char* b;
 
-	char a[10];
-	char* b;
+    printf("문자를 입력하세요 : ");
+    scanf("%s", a);
+    //a[] = "apple"
 
-	printf("문자를 입력하세요 : ");
-	scanf("%s", a);
+    b = a;
+    printf("저장된 문자열 : %s\n", b);
 
-	b = &a;
-
-	printf("%s", b);
-
-	return 0;
+    return 0;
 }

@@ -1,24 +1,20 @@
 #include <stdio.h>
 
-
-int ab10(int a, int b) {
-	a *= 10;
-	b *= 10;
+void ab10(int a, int b) { //ab10함수의 지역변수
+    a *= 10;  //a = a * 10
+    b *= 10;  //b = b * 10
+    //a = 10, b = 20
 }
 
 int main() {
+    int a, b; //main의 지역변수
 
-	int a, b;
+    a = 1;   
+    b = 2;
 
-	a = 1;
-	b = 2;
+    ab10(a, b);  //ab10의 a, b가 소멸함
 
-	ab10(a, b);
+    printf("a = %d, b = %d", a, b);  //1, 2 main의 a, b임
 
-
-	printf("a = %d b = %d", ab10('\0', a), ab10('\0', b));
-
-
-
-	return 0;
+    return 0;
 }

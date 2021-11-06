@@ -1,38 +1,40 @@
 #include <stdio.h>
 
 int main() {
+	/*학생 5명의 수학, 영어 점수의 합계와 평균*/
+	int x, y;
+	int score[5][2] = { 
+		{75, 80}, 
+		{85, 95}, 
+		{90, 100},
+		{70, 90},
+		{85, 54}
+	};
+	int total[2] = { 0 };  //합계 저장 초기화 때, 0을 1개만 표기
+	double avg[2] = { 0.0 }; //평균 저장
 
-	//5 명의 수학 영어 점수의 합계와 평균
-
-	int arr[5][2]; // 학생 5명의 수학,영어 점수 배열로 선언했고
-	int sumMath=0; //합계
-	int sumEng=0; //합계
-	int k = 0; // 수학,영어 나눠서 넣을려고 스위치 만듬
-	int avg=0; //평균
-
-
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 2; j++) {
-			if (k == 0) {
-				printf("%d번 학생의 수학 점수 입력 : ", i + 1);
-				scanf_s("%d", &arr[i][j]);
-				sumMath += arr[i][j];
-				k = 1;
-			}
-			else {
-				printf("%d번 학생의 영어 점수 입력 : ", i + 1);
-				scanf_s("%d", &arr[i][j]);
-				sumEng += arr[i][j];
-			}
+	//출력
+	for (x = 0; x < 5; x++) {
+		for (y = 0; y < 2; y++) {
+			printf("%3d", score[x][y]);
 		}
-		k = 0;
+		printf("\n");
 	}
 
-	avg = (sumMath + sumEng) / 5;
+	//합계 계산
+	for (x = 0; x < 5; x++) {
+		total[0] += score[x][0];  //수학점수 합계
+		total[1] += score[x][1];  //영어점수 합계
+	}
 
-	printf("수학 점수 합계는 : %d \n", sumMath);
-	printf("영어 점수 합계는 : %d \n", sumEng);
-	printf("평균은 : %d \n", avg);
-	
+	//평균 계산
+	avg[0] = (double)total[0] / 5;
+	avg[1] = (double)total[1] / 5;
+
+	printf("수학 합계 : %d\n", total[0]);
+	printf("영어 합계 : %d\n", total[1]);
+	printf("수학 평균 : %3.1lf\n", avg[0]);
+	printf("영어 평균 : %3.1lf\n", avg[1]);
+
 	return 0;
 }

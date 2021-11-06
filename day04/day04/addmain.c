@@ -3,14 +3,12 @@
 
 int main() {
 
-	int a, b, result;
-	a = 1;
-	b = 1;
+    int a, b, result;
+    a = 1;
+    b = 2;
 
+    result = add_func(a, b);
+    printf("합계 : %d\n", result);
 
-	result = add(a, b);
-	print("합계 : %d \n", result);
-
-	return 0;
-	
+    return 0;
 }

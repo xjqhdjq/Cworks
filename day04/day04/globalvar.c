@@ -1,20 +1,17 @@
 #include <stdio.h>
 
-int quantity=2; // 전역변수
-
-
-int price() {
-
-	int price = 10000 * quantity;
-	printf(" %d \n", price);
-
-	return price;
-}
+void price();
+int quantity = 2;  //전역 변수
 
 int main() {
 
-	printf("%d개에 %d원 입니다.", quantity, price());
-	
-	return 0;
+    printf("%d개에\n", quantity);
+    price();
+    
+    return 0;
 }
 
+void price() {
+    int price = 10000 * quantity;
+    printf("%d원입니다.\n", price);
+}

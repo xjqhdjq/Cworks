@@ -54,7 +54,7 @@
     <ClCompile Include="array_pointer2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="sayhello.c">
+    <ClCompile Include="sayHello.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

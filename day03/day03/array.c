@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 int main() {
+	//배열의 선언과 사용
+	int arr[3];  //정수형 배열 arr에 3개의 메모리 공간 할당
+	int i;   //반복 횟수
 
-	int arr[5];
-
+	//자료 저장
 	arr[0] = 10;
 	arr[1] = 20;
 	arr[2] = 30;
-	arr[3] = 0;
-	arr[4] = 50;
 
-	printf("%d\n", arr[0]); 
+	//1개 출력
+	printf("%d\n", arr[0]);  //10
 
-	for (int i = 0; i < 3; i++) {
-		printf("%d\n", arr[i]);
+	//전체 출력
+	for (i = 0; i < 3; i++) {
+		printf("%d ", arr[i]);
 	}
 
 	return 0;

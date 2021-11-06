@@ -1,5 +1,4 @@
+//add.h
+int add_func(int, int);
 
-#pragma once
-int add(int a, int b) {
-	add = a + b;
-}
+

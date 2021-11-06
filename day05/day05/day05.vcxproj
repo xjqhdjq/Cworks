@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8c3ab4b1-e1a5-4edd-aba2-4a2107177ed3}</ProjectGuid>
+    <ProjectGuid>{bd40e479-99c3-4aa3-8ca3-03ed0da7d869}</ProjectGuid>
     <RootNamespace>day05</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -172,7 +172,7 @@
     <ClCompile Include="pointer1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="sayhello.c" />
+    <ClCompile Include="sayHello.c" />
     <ClCompile Include="score2d.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
